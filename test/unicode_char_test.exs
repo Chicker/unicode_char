@@ -75,4 +75,22 @@ defmodule Unicode.CharTest do
     refute Char.whitespace?(")")
   end
 
+  test "letter?" do
+    assert Char.letter?("F")
+    assert Char.letter?("я")
+
+    # GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+    assert Char.letter?("ᾊ")
+    
+    # MODIFIER LETTER SMALL S
+    assert Char.letter?("\u02E2")
+
+    # PAU CIN HAU LETTER NGA
+    assert Char.letter?("\u11AC7")
+
+    refute Char.letter?("2")
+    refute Char.letter?("&")
+    refute Char.letter?("(")
+  end
+
 end

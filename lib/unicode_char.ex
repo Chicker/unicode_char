@@ -157,4 +157,12 @@ defmodule Unicode.Char do
   end
 
   def whitespace?(_), do: false
+
+  # letter
+
+  @is_letter_pat Regex.compile!(~S"\p{Ll}|\p{Lu}|\p{Lt}|\p{Lm}|\p{Lo}", "u")
+  def letter?(char) do
+    Regex.match?(@is_letter_pat, char)
+  end
+
 end
