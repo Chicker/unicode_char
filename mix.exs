@@ -27,7 +27,9 @@ defmodule Unicode.Char.Mixfile do
 
   defp package do
     [
-      files:       [ "lib", "mix.exs", "README.md", "LICENSE", "VERSION" ],
+      files:       [ "lib", "mix.exs", "README.md", "LICENSE", "VERSION",
+                    "CHANGES"
+                   ],
       maintainers: [ "Vadim Agishev (Chicker) <vadim.agishev@gmail.com>"],
       licenses:    [ "Same as Elixir" ],
       links:       %{
