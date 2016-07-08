@@ -39,7 +39,8 @@ defmodule Unicode.Char.Mixfile do
   end
   
   defp deps do
-    []
+    [{:benchfella, "~> 0.3.2", only: :dev }
+    ]
   end
 
   defp elixirc_paths(_), do: ["lib"]

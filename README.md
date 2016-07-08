@@ -34,3 +34,22 @@ defmodule MyModule do
   end
 end
 ```
+
+## Benchmarking
+
+| Function      | Time (ms)| Comment     |
+|---------------|----------|-------------|
+| Char.digit?   | 533      | 4x faster   |
+| digit? regex  | 2_141    |             |
+| ==============| ======== | ============|
+| Char.upper?   | 599      | 3,6x faster |
+| upper? regex  | 2_156    |             |
+| ==============|========= |============ |
+| Char.lower?   | 603      | 3,6x faster |
+| lower? regex  | 2_164    |             |
+
+Steps to reproduce:
+```
+mix deps.get
+mix bench --output ""
+```
