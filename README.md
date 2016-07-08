@@ -8,7 +8,7 @@ Add `unicode_char` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:unicode_char, "~> 0.6.0"}]
+  [{:unicode_char, "~> 0.6"}]
 end
 ```
 
